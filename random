@@ -1,0 +1,15 @@
+import random
+
+print("---------WELCOME TO PASSWORD GENERTORTOOL---------")
+print("enter length of ur password")
+len1=int(input())
+char="1234567890qwertyuiopasdfghjklzxcvbnm!@#$%^&*"
+number=int(input('amount of password'))
+
+for pwd in range(number) :
+    password=""
+
+    for c in range(len1) :
+        password+=random.choice(char)
+
+    print(password)
