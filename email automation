@@ -1,0 +1,22 @@
+import datetime as dt
+import random
+import smtplib
+email="nithish0036@gmail.com"
+passw="FUCKUBITCH@^&*"
+day=dt.datetime.now()
+week=day.weekday()
+if week==6:
+    with open("quotes.txt") as quote:
+        all1=quote.readlines()
+        quote=random.choice(all1)
+        print(quote)
+
+
+    with smtplib.SMTP("smtp.gmail.com") as connection:
+        connection.starttls()
+        connection.login(user=email, password=passw)
+        connection.sendmail(
+            from_addr=email,
+            to_addrs="nithish3604@gmail.com",
+            msg=f"Sublect:MONDAY MOTIVATION\n\n {quote}"
+        )
