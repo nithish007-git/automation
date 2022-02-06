@@ -1,8 +1,8 @@
 import datetime as dt
 import random
 import smtplib
-email="nithish0036@gmail.com"
-passw="FUCKUBITCH@^&*"
+email=
+passw=
 day=dt.datetime.now()
 week=day.weekday()
 if week==6:
